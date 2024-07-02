@@ -4,6 +4,8 @@
 
 ### tl;dr
 
+I have identified a way to silently install a Chrome extension avoiding the "common" TTP's attackers use today. 
+
 ### Methodology
 
 ### POC
