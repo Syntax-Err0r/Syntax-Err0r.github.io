@@ -31,3 +31,5 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 Below are some ideas I think could expand this TTP:
 
 - Automagically creating the extensionId's based on the parameters given
+- "Extension Stomping"
+-- think module stomping but chrome extensions :)
