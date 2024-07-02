@@ -2,21 +2,13 @@
 permalink: /
 ---
 
-
 ## About
 
-This project is built around using markdown content to make a website. 
+I am an Offensive Security Engineer with over 10 years of experience in security. I mainly run Purple Teams and Assumed Breaches but have a passion for traditional Red Teaming. For years I have told myself I would start and maintain a blog -- so hopefully I can get started and keep going :).
 
-This is great for non-developers to work on. No experience with Ruby, Jekyll, Liquid, HTML or CSS required. Those are all used internally, but you don't need to worry about that.
+## Posts
 
-This repo is super light. No config needed. You don't need to setup a theme or a layout. GitHub will figure that out and will apply its standard theme to your GitHub Pages site. So will it will have a clean, white, mobile-friendly site with a heading. The limitations are covered more on these pages, such as lack of a navbar. But you can still setup links to pages, as with the Menu below.
+Post links are below.
 
-The page you are currently viewing is `README.md` in the docs directory, with path set as `/` in the frontmatter. Alternatively, you can add `index.md` or `index.html` as your homepage. I just like how a README.md previews well in GitHub.
-
-## Menu
-
-Some info on how to make a site like this and how it works.
-
-- [About](about.md)
-- [Posts](Posts.md)
+- [Silently Install Chrome Extension For Persistence](Silently_Install_Chrome_Extension.md)
 
