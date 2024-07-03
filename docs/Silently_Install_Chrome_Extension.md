@@ -1,7 +1,7 @@
 # **Silently Install Chrome Extension For Persistence**
 
 
-![](assets/chrome_poc.gif)
+![](assets/chrome.mp4)
 
 
 ### tl;dr
