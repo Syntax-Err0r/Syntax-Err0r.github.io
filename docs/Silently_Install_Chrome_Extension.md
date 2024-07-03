@@ -19,6 +19,7 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 - no command line parameters
 - persistent
 - can be installed while in use but it wont re-load until chrome restarts so it is up to you if you want to kill chrome
+- no registry edits
 
 ### Methodology/Walkthrough
 
