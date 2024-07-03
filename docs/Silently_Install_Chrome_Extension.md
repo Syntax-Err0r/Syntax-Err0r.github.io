@@ -28,7 +28,7 @@ I identified one file continusouly was getting touched -- "Secure Preferences" i
 
 The first change was the extensionId being added to the Extensions:Settings JSON blob. This JSON blob contains information about the extension such as API permissions, where its loaded from, version, etc. This is an easy addition to any Secure Preferences file. 
 
-![screenshot](https://github.com/Syntax-Err0r/Syntax-Err0r.github.io/blob/main/assets/extension_settings.png)
+![screenshot](/assets/extension_settings.png)
 
 The second change was under the Protection:Macs:Extensions:Settings JSON blob. This appeared to be a SHA256 hash of some sort. This is where I found the aformentioned research paper and its a problem they already solved. Chrome (I assume all Chromium browsers) takes an HMAC hash of the JSON values added for the extension with the user SID and a hard coded seed (yes you read that correctly)
 
