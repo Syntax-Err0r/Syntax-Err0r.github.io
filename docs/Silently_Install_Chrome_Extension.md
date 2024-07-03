@@ -16,6 +16,7 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 
 ### Methodology/Walkthrough
 
+Of course Chromium is open source but I am lazy. My initial methodology was to inspect DLL's related to Chrome to see if there was any obvious exports related to extensions. Additionally I wanted to debug Chrome to see what exactly happens when loading an extension. After a bit of troubleshooting I thought about it and realized the EASIEST and LAZIEST way to identify what changes when Chrome loads an extension was just simple ProcMon. 
 
 
 ### POC
