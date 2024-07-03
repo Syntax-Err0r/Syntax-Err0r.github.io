@@ -2,7 +2,7 @@
 
 
 
-![](/assets/chrome_poc.gif)
+![](assets/chrome_poc.gif)
 
 
 
@@ -28,15 +28,15 @@ I identified one file continusouly was getting touched -- "Secure Preferences" i
 
 The first change was the extensionId being added to the Extensions:Settings JSON blob. This JSON blob contains information about the extension such as API permissions, where its loaded from, version, etc. This is an easy addition to any Secure Preferences file. 
 
-![screenshot](/assets/extension_settings.png)
+![screenshot](assets/extension_settings.png)
 
 The second change was under the Protection:Macs:Extensions:Settings JSON blob. This appeared to be a SHA256 hash of some sort. This is where I found the aformentioned research paper and its a problem they already solved. Chrome (I assume all Chromium browsers) takes an HMAC hash of the JSON values added for the extension with the user SID and a hard coded seed (yes you read that correctly)
 
-![screenshot](/assets/mac_settings.png)
+![screenshot](assets/mac_settings.png)
 
 The third change is the super_mac value at the end of the file. This again, takes an HMAC hash of JSON blobs in the file plus the SID and a hard coded seed. 
 
-![screenshot](/assets/super_mac.png)
+![screenshot](assets/super_mac.png)
 
 The latter two values I think are supposed to be the "security" around this TTP and while I understand this is a difficult problem to solve on client software it was surprisingly easy to overcome.  
 
