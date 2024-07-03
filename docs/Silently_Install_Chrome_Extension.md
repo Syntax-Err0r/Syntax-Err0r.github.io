@@ -181,7 +181,7 @@ Note: While writing the PoC I realized someone wrote a [research paper](https://
 
 ### Detections
 
-- Edits on the "Secure Preferences" file not by Chrome processes
+- Edits on the "Secure Preferences" file not by Chrome processes (credit to waldo-IRC on this idea)
 - Identify anomalous chrome extension file locations
 - Low prevalence extensions
 
