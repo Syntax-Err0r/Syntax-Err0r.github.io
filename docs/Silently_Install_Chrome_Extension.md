@@ -13,6 +13,8 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 - can be installed while in use but it wont re-load until chrome restarts so it is up to you if you want to kill chrome
 - no registry edits
 
+![](assets/cookie.gif)
+
 ### Introduction
 
 Since "browsers are the new lsass", over last few weeks I have been interested in how Chrome Extensions work and how an attacker or Red Teamers like myself could leverage these for persistence/cookie stealing/etc. However, the most difficult part is installing these extensions. I came across a couple articles such as attackers using powershell to use the [--load-extension](https://unit42.paloaltonetworks.com/chromeloader-malware/) parameter at the command line or using [remote debbuging](https://posts.specterops.io/stalking-inside-of-your-chromium-browser-757848b67949). However, these seemed somewhat easy to "detect" because of the command line parameters and the PPID's. Additionally, these are not persistent across sessions. I could hear my ex-coworker in the back of my mind saying "there's gotta be a better way!". My main inspiration was when opening Chrome and going to extensions, you could turn debug mode on and load an extension so I thought there HAS to be a way to do it without command line shenanigans. 
