@@ -45,6 +45,7 @@ The latter two values I think are supposed to be the "security" around this TTP 
 
 - We will be using [Crux](https://github.com/mttaggart/crux) since its easy to use and install
 - Crux Extension folder must be in C:\Users\Public\Downloads
+- You need the username and the SID of the account (for the SID leave off the last section i.e. -1001)
 
 ```
 import hmac 
