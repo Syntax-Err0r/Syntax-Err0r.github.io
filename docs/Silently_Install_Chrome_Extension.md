@@ -39,8 +39,8 @@ The latter two values I think are supposed to be the "security" around this TTP 
 
 ### POC
 
--We will be using [Crux](https://github.com/mttaggart/crux) since its easy to use and install
--Crux Extension folder must be in C:\Users\Public\Downloads
+- We will be using [Crux](https://github.com/mttaggart/crux) since its easy to use and install
+- Crux Extension folder must be in C:\Users\Public\Downloads
 
 ```
 import hmac 
