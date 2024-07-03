@@ -56,5 +56,4 @@ Below are some ideas I think could expand this TTP:
 
 - Automagically creating the extensionId's based on the parameters given
 - BoF it
-- "Extension Stomping"
--- think module stomping but chrome extensions :)
+- "Extension Stomping" (think module stomping but chrome extensions)
