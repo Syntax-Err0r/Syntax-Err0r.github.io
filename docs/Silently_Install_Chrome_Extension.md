@@ -8,6 +8,9 @@ The last few weeks I have been interested in how Chrome Extensions work and how 
 
 I have identified a way to silently install a Chrome extension avoiding the "common" TTP's attackers use today. 
 
+- no command line parameters
+- can be installed while in use but it wont re-load until chrome restarts so it is up to you if you want to kill chrome
+
 ### Methodology/Walkthrough
 
 ### POC
@@ -17,6 +20,8 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 ```
 
 ```
+
+Note: While writing the PoC I realized someone wrote a [research paper](https://www.cse.chalmers.se/~andrei/cans20.pdf) on this topic it just has not widely be weaponized (that I know of). They had some PoC code for the HMAC I leveraged on [github](https://github.com/Pica4x6/SecurePreferencesFile)
 
 ### Caveats
 
@@ -33,5 +38,6 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 Below are some ideas I think could expand this TTP:
 
 - Automagically creating the extensionId's based on the parameters given
+- BoF it
 - "Extension Stomping"
 -- think module stomping but chrome extensions :)
