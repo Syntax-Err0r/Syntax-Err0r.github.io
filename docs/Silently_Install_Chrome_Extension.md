@@ -1,6 +1,10 @@
 # **Silently Install Chrome Extension For Persistence**
 
-![demo](/assets/crux_tool.mp4)
+
+
+https://github.com/Syntax-Err0r/Syntax-Err0r.github.io/assets/45831663/13322cf9-58cb-4c42-9989-6bf6e77fde3d
+
+
 
 ### Introduction
 
