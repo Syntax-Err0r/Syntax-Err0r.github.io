@@ -178,7 +178,7 @@ Note: While writing the PoC I realized someone wrote a [research paper](https://
 ### Caveats
 
 - I hardcoded some things and I purposefully made some "opsec mistakes"
-- 'Secure Preferences' arent always in use, it could be the "Preferences" file
+- "Secure Preferences" arent always in use, it could be the "Preferences" file
 
 ### Detections
 
