@@ -6,7 +6,7 @@
 
 ### tl;dr
 
-I have identified a way to silently install a Chrome extension avoiding the "common" TTP's attackers use today. 
+I have identified a way to silently install a Chrome extension avoiding the "common" IOC's attackers use today. 
 
 - no command line parameters
 - persistent
@@ -17,9 +17,9 @@ I have identified a way to silently install a Chrome extension avoiding the "com
 
 ### Introduction
 
-Since "browsers are the new lsass", over last few weeks I have been interested in how Chrome Extensions work and how an attacker or Red Teamers like myself could leverage these for persistence/cookie stealing/etc. However, the most difficult part is installing these extensions. I came across a couple articles such as attackers using powershell to use the [--load-extension](https://unit42.paloaltonetworks.com/chromeloader-malware/) parameter at the command line or using [remote debbuging](https://posts.specterops.io/stalking-inside-of-your-chromium-browser-757848b67949). However, these seemed somewhat easy to "detect" because of the command line parameters and the PPID's. Additionally, these are not persistent across sessions. I could hear my ex-coworker in the back of my mind saying "there's gotta be a better way!". My main inspiration was when opening Chrome and going to extensions, you could turn debug mode on and load an extension so I thought there HAS to be a way to do it without command line shenanigans. 
+Since "browsers are the new lsass", over the last few weeks I have been interested in how Chrome Extensions work and how an attacker or Red Teamers like myself could leverage these for persistence/cookie stealing/etc. Extensions like [cursed chrome](https://github.com/mandatoryprogrammer/CursedChrome) can be invaluable during an op. However, the most difficult part is installing these extensions. I came across a couple articles such as attackers using powershell to use the [--load-extension](https://unit42.paloaltonetworks.com/chromeloader-malware/) parameter at the command line or using [remote debbuging](https://posts.specterops.io/stalking-inside-of-your-chromium-browser-757848b67949). However, these seemed somewhat easy to "detect" because of the command line parameters and the PPID's. Additionally, these are not persistent across sessions. I could hear my ex-coworker in the back of my mind saying "there's gotta be a better way"! 
 
-So I began to dig into Chrome--I had all my debuggers ready in my FLARE VM. I was ready to tackle all the AES and DPAPI Google would throw at me! Then after a few hours, I realized all I would need to be able to silently install a Chrome extension was some parameters for an HMAC algorithm and JSON edits in 1 file. I have not seen anyone write about this other than a [research paper](https://www.cse.chalmers.se/~andrei/cans20.pdf) I came across while writing the PoC. I certainly did not see any "red team" blogs weaponizing it or anything like that so I hope this is somewhat new to most. I cannot imagine someone did not weaponize this already so I apologize if I burn a TTP.  
+So I began to dig into Chrome--I had all my debuggers ready in my FLARE VM. I was ready to tackle all the AES and DPAPI Google would throw at me! After a few hours, I realized all I would need was some parameters for an HMAC algorithm and JSON edits in 1 file. I have not seen anyone write about this other than a [research paper](https://www.cse.chalmers.se/~andrei/cans20.pdf) I came across while writing the PoC. I certainly did not see any "red team" blogs weaponizing it or anything like that so I hope this is somewhat new to most. I cannot imagine someone did not weaponize this already so I apologize if I burn a TTP.  
 
 ### Methodology/Walkthrough
 
@@ -178,10 +178,11 @@ Note: While writing the PoC I realized someone wrote a [research paper](https://
 ### Caveats
 
 - I hardcoded some things and I purposefully made some "opsec mistakes"
+- 'Secure Preferences' arent always in use, it could be the "Preferences" file
 
 ### Detections
 
-- Edits on the "Secure Preferences" file not by Chrome processes (credit to waldo-IRC on this idea)
+- Edits on the "Secure Preferences" or "Preferences" file not by Chrome processes (credit to waldo-IRC on this idea)
 - Identify anomalous chrome extension file locations
 - Low prevalence extensions
 
