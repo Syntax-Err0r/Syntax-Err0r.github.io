@@ -137,7 +137,7 @@ def calc_supermac(json_file, sid, seed):
     return hash_obj.hexdigest().upper()
 
 def add_extension(user, sid):
-    ###add json to file--change location
+    ###add json to file
     extension_json=r'{"active_permissions":{"api":["activeTab","cookies","debugger","webNavigation","webRequest","scripting"],"explicit_host":["\u003Call_urls>"],"manifest_permissions":[],"scriptable_host":[]},"commands":{},"content_settings":[],"creation_flags":38,"filtered_service_worker_events":{"webNavigation.onCompleted":[{}]},"first_install_time":"13364417633506288","from_webstore":false,"granted_permissions":{"api":["activeTab","cookies","debugger","webNavigation","webRequest","scripting"],"explicit_host":["\u003Call_urls>"],"manifest_permissions":[],"scriptable_host":[]},"incognito_content_settings":[],"incognito_preferences":{},"last_update_time":"13364417633506288","location":4,"newAllowFileAccess":true,"path":"C:\\Users\\Public\\Downloads\\extension","preferences":{},"regular_only_preferences":{},"service_worker_registration_info":{"version":"0.1.0"},"serviceworkerevents":["cookies.onChanged","webRequest.onBeforeRequest/s1"],"state":1,"was_installed_by_default":false,"was_installed_by_oem":false,"withholding_permissions":false}'
      
      #convert to ordereddict for calc and addition
