@@ -190,6 +190,6 @@ Note: While writing the PoC I realized someone wrote a [research paper](https://
 
 Below are some ideas I think could expand this TTP:
 
-- Automagically creating the extensionId's based on the parameters given
+- Automagically creating the extensionId's based on the parameters given -- done :)
 - BoF it
 - "Extension Stomping" (think module stomping but chrome extensions)
