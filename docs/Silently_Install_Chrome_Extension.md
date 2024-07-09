@@ -47,6 +47,7 @@ The latter two values I think are supposed to be the "security" around this TTP 
 - We will be using [Crux](https://github.com/mttaggart/crux) since its easy to use and install
 - Crux Extension folder must be in C:\Users\Public\Downloads
 - You need the username and the SID of the account (for the SID leave off the last section i.e. -1001)
+- I left out some information in this post/PoC so youll have to do your own research to fully automate/weaponize this, however the below PoC works on a personal windows machine with a chrome install
 
 ```
 import hmac 
@@ -178,13 +179,17 @@ Note: While writing the PoC I realized someone wrote a [research paper](https://
 ### Caveats
 
 - I hardcoded some things and I purposefully made some "opsec mistakes"
-- "Secure Preferences" arent always in use, it could be the "Preferences" file
+- "Secure Preferences" arent always in use, it could be the "Preferences" file ;)
 
 ### Detections
 
 - Edits on the "Secure Preferences" or "Preferences" file not by Chrome processes (credit to waldo-IRC on this idea)
 - Identify anomalous chrome extension file locations
 - Low prevalence extensions
+
+### Mitigations
+
+- Use chrome's extension allow list
 
 ### Future Work
 
