@@ -17,7 +17,7 @@ Obtaining the Master Password is the most difficult step of this attack chain. Y
 
 For this blog we will be scraping Chrome's memory for a string that often aligns with the MasterPassword once it is entered (again--[not new](https://www.cyberark.com/resources/threat-research-blog/extracting-clear-text-credentials-directly-from-chromium-s-memory) ). In my testing on an up to date Windows 11 and chrome this script/method seems to work more than 80% of the time and is usually preceeded by “p.” but I have seen it elsewhere as well.
 
-![](masterpassword_extract.png)
+![](assets/masterpassword_extract.png)
 
 ```
 Add-Type -TypeDefinition @"
