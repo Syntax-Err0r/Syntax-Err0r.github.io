@@ -9,7 +9,7 @@ If an operator lands on a host with the 1Password Chrome Extension it is relativ
 
 Red Teaming boiled down is always: get access -> pivot -> get more access until you get where you need to -> plunder. With everything moving to the magical cloud; browsers, and by proxy browser extensions can become single points of failure. So I wanted to think of ways to make life of post-execution easier in obtaining passwords now that well known methods like cookies/lsass are significantly harder to obtain.
 
-With the [rise in use in password managers](https://www.forbes.com/sites/tonybradley/2024/10/24/password-managers-the-essential-defense-against-todays-cyber-threats/) and the secrets they contained I felt that this would be a good start. I chose 1Password because I am a customer but also have to assume almost all password manager extensions suffer from similar "flaws" as there has to be a way to obtain passwords locally/offline. For example, local KeePass DB's use [DPAPI in memory](https://keepass.info/help/base/security.html) once the safe is unlocked. 
+With the [rise in use of password managers](https://www.forbes.com/sites/tonybradley/2024/10/24/password-managers-the-essential-defense-against-todays-cyber-threats/) and the secrets they contained I felt that this would be a good start. I chose 1Password because I am a customer but also have to assume almost all password manager extensions suffer from similar "flaws" as there has to be a way to obtain passwords locally/offline. For example, local KeePass DB's use [DPAPI in memory](https://keepass.info/help/base/security.html) once the safe is unlocked. 
 
 ### Obtaining Master Password
 
