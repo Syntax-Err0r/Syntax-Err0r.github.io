@@ -142,7 +142,7 @@ Steps to reproduce:
 
 - Install Chrome in fresh VM
 - Install the 1Password Extension for Chrome
-- Copy over ‘C:\Users\Nick\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\chrome-extension_aeblfdkhhhdcdjpifhhbdiojplfjncoa_0.indexeddb.leveldb’ and everything underneath to the VM from the victim's machine 
+- Copy over ‘%localappdata%\Google\Chrome\User Data\Default\IndexedDB\chrome-extension_aeblfdkhhhdcdjpifhhbdiojplfjncoa_0.indexeddb.leveldb’ and everything underneath to the VM from the victim's machine 
 - Enter in the MasterPassword
 
 
