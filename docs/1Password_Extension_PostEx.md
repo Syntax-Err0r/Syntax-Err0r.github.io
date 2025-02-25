@@ -136,7 +136,7 @@ Search-ProcessMemory -TargetPID $proc.id -SearchString $SearchString -ExtraChara
 
 ### The Curious Case Of MFA
 
-While perusing 1Passwords [support documents](https://blog.1password.com/should-protect-1password-with-2fa/) on MFA I noticed the line "When turned on, a second factor will be required to add your account on a new device, in addition to your 1Password account password and Secret Key.”. The word “new” was interesting to me. I knew from reversing the extension there was an associated device identifier but what if we can mimic/copy that id? I am sure there is some complicated checks/hashes/etc. that go into it but what I realized was if we copy over the local extension files the chrome extension saw the same device identifier, which means no MFA prompt or alerting to the user. 
+While perusing 1Passwords [support documents](https://blog.1password.com/should-protect-1password-with-2fa/) on MFA I noticed the line "When turned on, a second factor will be required to add your account on a new device, in addition to your 1Password account password and Secret Key.” The word “new” was interesting to me. I knew from reversing the extension there was an associated device identifier but what if we can mimic/copy that id? I am sure there is some complicated checks/hashes/etc. that go into it but what I realized was if we copy over the local extension files the chrome extension saw the same device identifier, which means no MFA prompt or alerting to the user. 
 
 Steps to reproduce:
 
