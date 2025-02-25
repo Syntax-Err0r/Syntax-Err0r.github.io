@@ -11,5 +11,5 @@ I am an Offensive Security Engineer with over 10 years of experience in security
 Post links are below.
 
 - [Silently Install Chrome Extension For Persistence](Silently_Install_Chrome_Extension.md)
-- [1Password Chrome Extension Post-Ex](1Password_Extension_PostEx.md)
+- [1Password Chrome Extension Post-Ex](https://syntax-err0r.github.io/1Password_Extension_PostEx.html)
 
