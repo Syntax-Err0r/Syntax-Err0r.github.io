@@ -3,7 +3,7 @@
 
 ### tl;dr
 
-I have identified a, probably known, way to "bypass MFA" (it is by design) on 1Password's Chrome Extension. So with the Master Password of the account it is possible to obtain the plaintext creds/secrets stored in the vault without needing MFA. None of this will be new or groundbreaking, I think it is just an area operators might not be looking. 
+If an operator lands on a host with the 1Password Chrome Extension it is relatively easy to obtain the plaintext passwords stored in the vault. I have identified a, probably known, way to "avoid MFA" (it is by design) on 1Password's Chrome Extension. So with the Master Password of the account it is possible to obtain the plaintext creds/secrets stored in the vault without needing MFA. None of this will be new or groundbreaking, I think it is just an area operators might not be looking. 
 
 ### Introduction
 
