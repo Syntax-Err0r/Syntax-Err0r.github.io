@@ -15,7 +15,7 @@ With the [rise in use of password managers](https://www.forbes.com/sites/tonybra
 
 Obtaining the Master Password is the most difficult step of this attack chain. You could [install a chrome extension](https://syntax-err0r.github.io/Silently_Install_Chrome_Extension.html) or keylog the host or prompt the user, etc.
 
-For this blog we will be scraping Chrome's memory for a string that often aligns with the MasterPassword once it is entered (again--[not new](https://www.cyberark.com/resources/threat-research-blog/extracting-clear-text-credentials-directly-from-chromium-s-memory) ). In my testing on an up to date Windows 11 and chrome this script/method seems to work more than 80% of the time and is usually preceeded by “p.” but I have seen it elsewhere as well.
+For this blog we will be scraping Chrome's memory for a string that often aligns with the MasterPassword once it is entered (again--[not new](https://www.cyberark.com/resources/threat-research-blog/extracting-clear-text-credentials-directly-from-chromium-s-memory) ). In my testing on an up to date Windows 11 and chrome this script/method works more than 80% of the time and is usually preceded by “p.” only because of the way it is printed to make it easier. You could also just check ProcessHacker’s strings.
 
 ![](assets/masterpassword_extract.png)
 
