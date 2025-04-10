@@ -23,7 +23,7 @@ Following a similar walkthrough on my first blog I recommend turning Developer M
 
 I decided to not release a full PoC as the changes needed are minimal and should be doable by someone who read my first blog. Just know the debug slider on the extensions page must be set to true.  
 
-![](assets/new_extension.gif)
+![](assets/new_extension.gif) 
 
 ### Detections
 
