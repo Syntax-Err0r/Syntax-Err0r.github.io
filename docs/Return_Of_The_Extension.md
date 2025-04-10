@@ -17,7 +17,7 @@ As originally mentioned Chrome is now doing some level of checking to prevent ex
 
 ![](assets/old_extension.gif)
 
-Following a similar walkthrough on my first blog I recommend turning Developer Mode on, installing the extension, and then opening the Secure Preferences/Preferences file to identify WHAT exactly changed. 
+Following a similar walkthrough on my first blog I recommend turning Developer Mode on, installing the extension, and then opening the Secure Preferences/Preferences file to identify WHAT exactly changed. You can use a JS diff tool for this.
 
 ### POC
 
