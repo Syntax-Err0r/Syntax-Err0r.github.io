@@ -5,7 +5,7 @@
 
 Chrome has had some changes that identify installed extensions not from the web store and preventing them from being turned on not in Developer Mode, breaking my previous script/method. I have not identified what exactly Chrome is keying off of but I did find a way to still load these extensions using the same files/techniques. This still avoids the IOC's of the more common methods attackers are known to use.
 
-For the PoC I am installing [RedExt](https://github.com/Darkrain2009/RedExthttps://github.com/Darkrain2009/RedExt)
+For the PoC I am installing [RedExt](https://github.com/Darkrain2009/RedExt)
 
 ### Introduction
 
