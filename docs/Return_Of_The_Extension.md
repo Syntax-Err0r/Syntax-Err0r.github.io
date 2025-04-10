@@ -15,7 +15,7 @@ A friend alerted me to the fact that something had changed with Chrome and my ol
 
 As originally mentioned Chrome is now doing some level of checking to prevent extensions not installed via the Chrome Store from being turned on without Developer Mode. Below is my original PoC against the most up to date Chrome. You will see the extension loaded but not turned on. 
 
-![Old Extension](assets/old_extension.mp4)
+https://github.com/user-attachments/assets/5bdd6bd2-c536-44c1-a711-069831038752
 
 Following a similar walkthrough on my first blog I recommend turning Developer Mode on, installing the extension, and then opening the Secure Preferences/Preferences file to identify WHAT exactly changed. 
 
