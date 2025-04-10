@@ -12,5 +12,5 @@ Post links are below.
 
 - [Silently Install Chrome Extension For Persistence](Silently_Install_Chrome_Extension.md)
 - [1Password Chrome Extension Post-Ex](https://syntax-err0r.github.io/1Password_Extension_PostEx.html)
-- [Silent Chrome Extension Installation Revisited](https://syntax-err0r.github.io/Silently_Install_Chrome_Extension.html)
+- [Silent Chrome Extension Installation Revisited](https://syntax-err0r.github.io/Return_Of_The_Extension.html)
 
