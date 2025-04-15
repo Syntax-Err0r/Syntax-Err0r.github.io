@@ -3,7 +3,7 @@
 
 ### tl;dr
 
-Using KeePass's extension feature it is very simple to dump the entire DB and extract it. Simply put, a single DLL on file disk will extract the entire DB in plaintext. While I focus on Windows, this technique can easily be ported to other OS's
+Using KeePass's extension feature it is very simple to dump the entire DB and extract it. **Simply put, a single DLL on disk will extract the entire DB in plaintext.** While I focus on Windows, this technique can easily be ported to other OS's
 
 Note: **I do not believe any of this is novel or new, just not widely used.** I spoke to a few friends and they were not aware of this particular TTP against KeePass. Of course after I completed this research I was made aware of the [KeeFarce Reborn](https://github.com/d3lb3/KeeFarceReborn/tree/main) repository. However, their tool uses the export function, which I explicitly avoided since it has been known to be used on other dumping tools.
 
@@ -35,7 +35,7 @@ Looking at that function you will see a "GetSafe" function being called for "Pas
 
 ![](assets/getsafe.png)
 
-Working backwards we see the String is a part of a "PwEntry". Continuing to work backwards you will eventually see PwEntry is essentially an array of the entries within the open Database. Using their same code we can effectively use KeePass as a reference and dump entries. I provide a sample code below but you will need to work on getting the proper methods/variables called. This then just quickly sends the information to a remote host. 
+Working backwards we see the String is a part of a "PwEntry". Continuing to work backwards you will eventually see PwEntry is essentially an array of the entries within the open Database. Using their same code we can effectively use KeePass's code as a reference and dump entries, avoiding calling the RTLDecryptMemory API directly. I provide a sample code below but you will need to work on getting the proper methods/variables called. The code below then just quickly sends the information to a remote host. 
 
 ```
     foreach (var entry in entries)
@@ -63,7 +63,11 @@ Working backwards we see the String is a part of a "PwEntry". Continuing to work
     }
 ```
 
-![](assets/dbcreds.png)
+A sample plugin template can be found [here](https://keepass.info/plugins.html#testplugin)
+
+### Video
+
+![](assets/keypass_mov.gif)
 
 ### Other Interesting Tidbits
 
@@ -72,6 +76,8 @@ One of the drawbacks of this method is if KeePass is installed in Program Files 
 In addition I noticed once a user decrypts the password in KeePass, the password is stored in plaintext which introduces the possibility to just scrape memory. 
 
 ![](assets/findmepassword.png)
+
+Lastly why stick to Passwords only? Seems like a nice Persistence mechanism for code injection into a trusted process.
 
 ### Detections
 
