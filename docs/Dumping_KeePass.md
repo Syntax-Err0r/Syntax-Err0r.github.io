@@ -3,7 +3,7 @@
 
 ### tl;dr
 
-Using KeePass's extension feature it is very simple to dump the entire DB and extract it. Simply put, a single DLL on file disk and extract the entire DB in plaintext. While I focus on Windows, this technique can easily be ported to other OS's
+Using KeePass's extension feature it is very simple to dump the entire DB and extract it. Simply put, a single DLL on file disk will extract the entire DB in plaintext. While I focus on Windows, this technique can easily be ported to other OS's
 
 Note: **I do not believe any of this is novel or new, just not widely used.** I spoke to a few friends and they were not aware of this particular TTP against KeePass. Of course after I completed this research I was made aware of the [KeeFarce Reborn](https://github.com/d3lb3/KeeFarceReborn/tree/main) repository. However, their tool uses the export function, which I explicitly avoided since it has been known to be used on other dumping tools.
 
