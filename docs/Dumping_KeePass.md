@@ -67,7 +67,7 @@ A sample plugin template can be found [here](https://keepass.info/plugins.html#t
 
 ### Video
 
-![](assets/keypass_mov.gif)
+![](assets/keepass_mov.gif)
 
 ### Other Interesting Tidbits
 
