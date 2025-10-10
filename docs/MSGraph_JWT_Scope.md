@@ -31,6 +31,8 @@ While editing FindMeAccess to automate post-authentication Graph enumeration on 
 
 Cross-referencing with EntraScopes and the PreConsent Explorer confirmed the To-Do app was only pre-consented for User.Read. Additionally, Microsoft's documentation states that User.Read should _only_ return information for the signed-in user — not allow tenant-wide user enumeration.
 
+![](assets/user_read_perm.jpg)
+
 And yet, the token worked on /users, returning the **entire directory**.
 
 ## Escalating Impact
