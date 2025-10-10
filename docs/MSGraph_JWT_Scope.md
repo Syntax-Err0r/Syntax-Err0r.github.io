@@ -1,4 +1,4 @@
-# The Curious Case of MSGraph JWT and
+# The Curious Case of MSGraph JWT and Preconsented Application Scopes
 
 ## tl;dr
 
@@ -6,7 +6,7 @@ Access tokens issued for a **subset** of Microsoft first-party applications for 
 
 This behavior indicates that **JWT scope claims do not always reflect the actual permissions granted by the token** and expands the attack surface for recon, contradicting documented behavior. It may also suggest broader misconfigurations across clientId/resource pairs.
 
-**In my opinion, the key impact—beyond being interesting—is that it undermines defensive assumptions. Organizations implementing Conditional Access Policies may misjudge the risk of certain apps based on their documented scopes, allowing indirectly "privileged" apps to slip through MFA or managed device requirements. Also during Incident Response, logged scopes may falsely downplay an attacker’s actual access, making detection and scoping more difficult. This also appears to be an MFA bypass if the tenant has any CAP exceptions as MSGraph will allow user.read scope tokens since they are not "privileged"**
+**In my opinion, the key impact—beyond being interesting—is that it undermines defensive assumptions. Organizations implementing Conditional Access Policies may misjudge the risk of certain apps based on their documented scopes, allowing indirectly "privileged" apps to slip through MFA or managed device requirements. Also during Incident Response, logged scopes may falsely downplay an attacker’s actual access, making detection and scoping more difficult. It is also commonly allowed without MFA depending on the tenant as the user.read scope tokens are not considered "privileged"**
 
 This was reported to MSRC on **July 8** and was considered a non issue.
 
