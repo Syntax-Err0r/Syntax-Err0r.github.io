@@ -31,16 +31,11 @@ While editing FindMeAccess to automate post-authentication Graph enumeration on 
 
 Cross-referencing with EntraScopes and the PreConsent Explorer confirmed the To-Do app was only pre-consented for User.Read. Additionally, Microsoft's documentation states that User.Read should _only_ return information for the signed-in user — not allow tenant-wide user enumeration.
 
-_List Users Permission Requirements_
-
 And yet, the token worked on /users, returning the **entire directory**.
 
 ## Escalating Impact
 
 After scratching my head for a few days I wondered what other endpoints I could hit with that access token. After some trial and error I could hit some interesting endpoints like /contacts and /servicePrincipals. According to Microsoft documentation I should need OrgContact.Read.All for /contacts and Application.Read.All for /servicePrincipals. There are a few others I was able to access with a User.Read scope but it will depend on the clientId you have access to.
-
-
-_List Service Principals Permission Requirements_
 
 ![](assets/SP_doc_example.png)
 
