@@ -8,7 +8,7 @@ This behavior indicates that **JWT scope claims do not always reflect the actual
 
 **In my opinion, the key impact—beyond being interesting—is that it undermines defensive assumptions. Organizations implementing Conditional Access Policies may misjudge the risk of certain apps based on their documented scopes, allowing indirectly "privileged" apps to slip through MFA or managed device requirements. Some of the apps are also commonly allowed without MFA depending on the tenant as the user.read scope tokens are not considered "privileged". Also during Incident Response, logged scopes may falsely downplay an attacker’s actual access, making detection and scoping more difficult. **
 
-This was reported to MSRC on **July 8** and was considered a non issue.
+This was reported to MSRC on **July 8** and was considered a non issue because users by default can dump this information.
 
 If you are looking for awesome azure content Charles Hamilton at [TrueCyber](https://truecyber.world/) is going through a great azure series right now with a lot of interesting finds. 
 
