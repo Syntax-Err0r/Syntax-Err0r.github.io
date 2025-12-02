@@ -6,6 +6,8 @@ Access tokens issued for a **subset** of Microsoft first-party applications for 
 
 This behavior indicates that **JWT scope claims do not always reflect the actual permissions granted by the token** and expands the attack surface for recon, contradicting documented behavior. It may also suggest broader misconfigurations across clientId/resource pairs.
 
+**UPDATE**: This is due to [Resource Exclusions in CAP](https://cloudbrothers.info/en/conditional-access-bypasses/#resource-exclusion-bypass)
+
 **In my opinion, the key impact—beyond being interesting—is that it undermines defensive assumptions. Organizations implementing Conditional Access Policies may misjudge the risk of certain apps based on their documented scopes, allowing indirectly "privileged" apps to slip through MFA or managed device requirements. Some of the apps are also commonly allowed without MFA depending on the tenant as the user.read scope tokens are not considered "privileged". Also during Incident Response, logged scopes may falsely downplay an attacker’s actual access, making detection and scoping more difficult.**
 
 This was reported to MSRC on **July 8** and was considered a non issue because users by default can dump this information.
